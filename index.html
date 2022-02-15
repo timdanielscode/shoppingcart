@@ -1,0 +1,81 @@
+<!-- Tim Daniels -->
+<!-- 97044742 -->
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css">
+		<script src="webshop.js"></script>
+	</head>
+	<body>
+		<!-- code werkt alleen in chrome  -->
+		<script>
+			alert("bekijk de webshop in google chrome");
+		</script>
+		<div class="row">
+			<div class="col">
+				<!-- item 1 -->
+				<img class="productImg" src="images/laptopcases.jpg" width="150px" alt="">
+				<br>Flip Laptop Cases Prijs 19.99
+				<form name="orderform" id="orderform"
+				action="index.html"
+					method="get" onsubmit="basket.addItem(this);">
+					<input type="hidden" name="id" value="1">
+					<input type="hidden" name="product" value="Laptop Case">
+					<input type="hidden" name="model" value="Flip">
+					<input type="hidden" name="prijs" value="19.99">
+					Aantal:
+					<input type="text" size=2 maxlength=3 name="aantal" value="1">
+					<input type="image" src="images/basket.jpg" width="100px">
+				</form>
+				<hr>
+				<!-- item 2 -->		
+				<img class="productImg" src="images/toetsenbord.jpg" width="150px" alt="">
+				<br>HP toetsenbord Prijs 4.99
+				<form name="orderform" id="orderform"
+					action="index.html"
+					method="get" onsubmit="basket.addItem(this);">
+					<input type="hidden" name="id" value="2">
+					<input type="hidden" name="product" value="Keyboard">
+					<input type="hidden" name="model" value="HP">
+					<input type="hidden" name="prijs" value="4.99">
+					Aantal:
+					<input type="text" size=2 maxlength=3 name="aantal" value="1">
+					<input type="image" src="images/basket.jpg" width="100px">
+				</form>
+				<hr>
+				<!-- item 3 -->		
+				<img class="productImg" src="images/muis.jpg" width="150px" alt="">
+				<br>HP muis Prijs 1.99
+				<form name="orderform" id="orderform"
+					action="index.html"
+					method="get" onsubmit="basket.addItem(this);">
+					<input type="hidden" name="id" value="3">
+					<input type="hidden" name="product" value="Mouse">
+					<input type="hidden" name="model" value="HP">
+					<input type="hidden" name="prijs" value="1.99">
+					Aantal:
+					<input type="text" size=2 maxlength=3 name="aantal" value="1">
+					<input type="image" src="images/basket.jpg" width="100px">
+				</form>
+				<hr>
+			</div>
+			<div class="col">
+				<div class="row">
+					<div class="col2">
+						<!-- het winkelmandje die de functie showBasket opvraagd -->
+						<a href="javascript:basket.showBasket()">
+							<div class="view">
+								<img src="images/view.png">
+							</div>
+						</a>
+					</div>
+					<div class="col12">
+						<!-- de table waarin alle producten aan worden toegevoegd --> 
+						<table id="output" cellpadding="8"></table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
